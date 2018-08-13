@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'HMS'),
 
     /*
     |--------------------------------------------------------------------------
@@ -154,11 +154,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        HMS\Providers\AppServiceProvider::class,
+        HMS\Providers\AuthServiceProvider::class,
+        // HMS\Providers\BroadcastServiceProvider::class,
+        HMS\Providers\EventServiceProvider::class,
+        HMS\Providers\RouteServiceProvider::class,
 
     ],
 

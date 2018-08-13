@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace HMS\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
