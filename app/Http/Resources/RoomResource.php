@@ -16,8 +16,16 @@ class RoomResource extends JsonResource
     {
         return [
             'roomNo' => $this->roomNo,
-            'type'=> $this->roomType,
-            'floor' => $this->floor
+            'type'=> $this->type,
+            'floor' => $this->floor,
+            'rate'=> $this->rate,
+            'rateperhour'=> $this->rateperhour
+        ];
+    }
+    public function with($request){
+        return[
+            'version' => '1.0.0',
+            'author' => 'mjrc'
         ];
     }
 }

@@ -19,16 +19,14 @@
     @include('includes.sidenav')
 
         <main>  
-            <div id="app" class="mycontainer">
-                @yield('content')
-            </div>      
+            @yield('content')
         </main>
     
         <footer>
         @include('includes.footer')
     </footer>
 
-    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('js/app.js') }}"></script> --}}
     <script>M.AutoInit();</script>
 
 </body>

@@ -12,13 +12,14 @@
 */
 
 Route::resource('/', 'Dashboard');
-Route::resource('/Rooms', 'RoomsController');
-Route::resource('/RoomTypes', 'RoomTypes');
+// Route::resource('/Rooms', 'RoomsController');
+// Route::resource('/RoomTypes', 'RoomTypes');
+
 // Route::get('/', 'Dashboard@index');
 
-// Route::get('/', function () {
-//     return view('dashboard');
-// });
+Route::get('/Rooms', function () {
+    return view('pages.Rooms');
+});
 
 // Route::get('/manageRooms', function () {
 //     return view('dashboard');

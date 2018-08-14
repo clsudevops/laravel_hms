@@ -17,3 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('Rooms','RoomsController@index');
+Route::get('Room/{id}','RoomsController@show');
+Route::post('Room','RoomsController@store');
+Route::put('Room','RoomsController@store');
+Route::delete('Room/{id}','RoomsController@destroy');

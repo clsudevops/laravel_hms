@@ -1,7 +1,6 @@
 @extends('layouts.app') 
 
 @section('content')
-    {{-- <example-component></example-component> --}}
     <div class="row">
             <div class="col s12">
                 <div class="card-1">
@@ -10,7 +9,6 @@
                     </div>
                     <div class="row" style="margin-top:20px;">
                         <div class="col s12 m7">
-                            <search></search>
                             <table class="z-depth-2 highlight roomTypeTable">
                                 <thead>
                                     <tr>
@@ -23,18 +21,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="roomTable">
-                                    @if(count($rooms) > 1)
-                                        @foreach($rooms as $room)
-                                            <tr>
-                                                <td>{{ $room->roomNo }}</td>
-                                                <td>{{ $room->type }}</td>
-                                                <td>{{ $room->floor }}</td>
-                                                <td>{{ $room->rate }}</td>
-                                                <td>{{ $room->rateperhour }}</td>
-                                                <td><a class="btn btn-flat btn-2 tooltipped" style="margin-right:5px;" data-tooltip="Delete"><i class="material-icons">delete</i></a></td>
-                                            </tr>
-                                        @endforeach
-                                    @endif
+                                    
                                 </tbody>    
                             </table>
                             {{-- <ul class="pagination right" id="pagination"></ul> --}}
@@ -57,7 +44,6 @@
                                     </div>
                                 </div>
                                 <div class="row" style="padding:0 15px;margin-bottom:0px;">
-                                    <roomtype></roomtype>
                                     <div class="col s12 m4">
                                         <label >Select Floor</label>
                                         <select id="roomFloor" style="height:36px; line-height:36px;">
@@ -113,4 +99,5 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="{{ asset('js/pages/Rooms.js') }}"></script>
 @endsection

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class RoomModel extends Model
 {
-    protected $table = 'rooms';
+    protected $table = 'vw_rooms';
     protected $primaryKey = 'roomNo';
     public $timestamps = false;
 }
