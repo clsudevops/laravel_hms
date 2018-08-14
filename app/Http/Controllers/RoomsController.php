@@ -9,8 +9,9 @@ use HMS\Http\Resources\RoomResource;
 class RoomsController extends Controller
 {
     
-    public function index()
+    public function index(Request $request)
     {   
+        $search = $request->input('search');
         // $roomtypes = RoomtypeModel::all()->first();
         // $rooms = RoomModel
         // ::join('roomtypes', 'rooms.roomType', '=', 'roomtypes.id')
@@ -22,10 +23,13 @@ class RoomsController extends Controller
         // return new RoomResource(RoomModel::find(1));
         // return RoomResource::collection($rooms);
         //return view('pages.manageRooms')->with(compact('rooms', 'roomtypes'));
+        $rooms = RoomModel::search($search)->paginate(10);
 
-        $rooms = RoomModel::all();
-        return RoomResource::collection($rooms);
-        // return view('pages.manageRooms')->with('rooms',$rooms);
+        // $rooms = RoomModel::all();
+        // return RoomResource::collection($rooms);
+        // return view('pages.Rooms')->with('rooms',$rooms);
+        // return view('pages.Rooms')->with(compact('rooms', 'search'));
+         return view('pages.Rooms', compact('rooms', 'search'));
     }
 
     public function create()

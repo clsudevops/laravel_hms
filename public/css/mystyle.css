@@ -137,15 +137,15 @@ a.btn{
     padding-bottom: 5px;
 }
 
-.roomtable th, .guesttable th, .roomTypeTable th, ItemInventoryTable th{
+.roomtable th, .guesttable th, .myTable th, ItemInventoryTable th{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
 }
 
-.roomTypeTable td{
+.myTable td{
     padding: 8px 0px;
 }
-.roomTypeTable td, .roomTypeTable th{
+.myTable td, .myTable th{
     padding-left: 25px;
 }
 
@@ -486,8 +486,16 @@ span.guestName{
     margin-left: 2.7rem;
 }
 
-#roomTable, #roomTypeTable, #pagination li a,
+#roomTable, #myTable, #pagination li a,
 .materialboxed, .summary table td,
 .index-summaries .collapsible-body table tr{
    cursor: pointer;
+}
+
+span.page-link{
+    color: white;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    line-height: 30px;
 }
