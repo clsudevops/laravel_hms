@@ -16,6 +16,9 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('search', require('./components/Search.vue'));
+Vue.component('roomtype', require('./components/RoomType.vue'));
+
 
 const app = new Vue({
     el: '#app'

@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+Route::resource('/', 'Dashboard');
+Route::resource('/Rooms', 'RoomsController');
+Route::resource('/RoomTypes', 'RoomTypes');
+// Route::get('/', 'Dashboard@index');
+
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
+
+// Route::get('/manageRooms', function () {
+//     return view('dashboard');
+// });

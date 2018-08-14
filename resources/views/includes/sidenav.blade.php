@@ -46,7 +46,7 @@
                 <a class="collapsible-header"><i class="material-icons">settings</i>Manage<i class="material-icons right">arrow_drop_down</i></a>
                 <div class="collapsible-body">
                     <ul>  
-                        <li><a href="manageRooms.php"><i class="material-icons left">hotel</i>Rooms</a></li>
+                        <li><a href="{{ url('/Rooms') }}"><i class="material-icons left">hotel</i>Rooms</a></li>
                         <li><a href="manageRoomTypes.php"><i class="material-icons left">weekend</i>Room Types</a></li>
                         <li><a href="kitchen.php"><i class="material-icons left">restaurant_menu</i>Food Menus</a></li>
                         <li><a href="extras.php"><i class="material-icons left">dns</i>Extras</a></li>
